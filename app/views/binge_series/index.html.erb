@@ -10,6 +10,6 @@
 
 <% @series.each do |serie| %>
   <div class="serie-overview">
-    <%= link_to serie.title, serie %>
+    <%= link_to serie.title, binge_series_seasons_path(serie.id) %>
   </div>
 <% end %>

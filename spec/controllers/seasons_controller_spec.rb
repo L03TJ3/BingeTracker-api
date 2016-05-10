@@ -5,9 +5,14 @@ describe SeasonsController do
   let(:binge_episodes) { create(:binge_episode)}
 
   describe "GET index" do
-    it "returns list of seasons for series" do
-      get :index, binge_serie_id: binge_series.to_param
-      expect( page.find(:css, 'div.season').text ).to eq "1"
+    it "returns list of seasons for serie" do
+      get :index, binge_series_id: binge_series.to_param
+    end
+  end
+
+  describe "GET show" do
+    it "returns list of episodes for season x" do
+
     end
   end
 end
