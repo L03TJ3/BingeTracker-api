@@ -10,7 +10,7 @@ BingeSerie.create(
 BingeEpisode.create(
   name: "The Rains of Castamere",
   description: "lorem ipsum",
-  season: 3,
+  season: 2,
   binge_serie_id: 1
 )
 BingeEpisode.create(
@@ -22,6 +22,6 @@ BingeEpisode.create(
 BingeEpisode.create(
   name: "Ipsum",
   description: "lorem ipsum",
-  season: 3,
+  season: 2,
   binge_serie_id: 1
 )

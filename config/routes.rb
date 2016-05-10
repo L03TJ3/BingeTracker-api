@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  root 'binge_series#index'
 end
