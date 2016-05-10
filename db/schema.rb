@@ -11,10 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510110417) do
+ActiveRecord::Schema.define(version: 20160510125302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "binge_episodes", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "seasons"
+    t.integer  "binge_serie_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "binge_episodes", ["binge_serie_id"], name: "index_binge_episodes_on_binge_serie_id", using: :btree
+
+  create_table "binge_series", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",               default: "", null: false
@@ -35,4 +54,5 @@ ActiveRecord::Schema.define(version: 20160510110417) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "binge_episodes", "binge_series", column: "binge_serie_id"
 end
