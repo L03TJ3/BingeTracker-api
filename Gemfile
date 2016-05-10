@@ -38,6 +38,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails' , '~> 4.0'
   gem 'faker'
+  gem 'json_matchers'
 end
 
 group :development do
