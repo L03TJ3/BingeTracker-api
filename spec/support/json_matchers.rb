@@ -1,1 +1,1 @@
-JsonMatchers.schema_root = "schemas/"
+JsonMatchers.schema_root = "spec/support/schemas/"
