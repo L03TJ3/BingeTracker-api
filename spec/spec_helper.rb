@@ -22,7 +22,7 @@ RSpec.configure do |config|
 
   config.after(:each) do
     if Rails.env.test? || Rails.env.cucumber?
-      FileUtils.rm_rf(Dir["#{Rails.root}/spec/support/test_images"])
+      FileUtils.rm_rf(Dir["#{Rails.root}/spec/support/test_images/binge_serie"])
     end
   end
 
