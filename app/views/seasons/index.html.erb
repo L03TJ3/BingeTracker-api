@@ -1,0 +1,8 @@
+<h1>Season overview for <%= @serie.title %></h1>
+<% @count.times do | c | %>
+  <div class="season">
+    <%= link_to binge_series_season_path(@serie.id, c + 1) do %>
+      <h2>Season <%= c + 1 %> </h2>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<h1>BingeSeries</h1>
+
+<p> Welcome to BingeTracker!
+    Here you can follow all the series that you watch
+</p>
+
+<p>
+   You can click one of the series below to see all its episodes
+</p>
+
+<% @series.each do |serie| %>
+  <div class="serie-overview">
+    <%= link_to serie.title, binge_series_seasons_path(serie.id) %>
+  </div>
+<% end %>

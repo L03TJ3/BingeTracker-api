@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": ["binge_series"],
+  "properties": {
+    "posts": {
+      "type": "array",
+      "items": {
+        "required": ["title", "description", "image"],
+        "properties": {
+          "title": { "type": "string" },
+          "description": { "type": "text" },
+          "body": { "type": "string" }
+        }
+      }
+    }
+  }
+}

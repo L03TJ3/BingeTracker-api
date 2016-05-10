@@ -1,7 +1,8 @@
 FactoryGirl.define do
-  factory :binge_series, class: 'BingeSerie' do
+  factory :binge_serie do
     title "MyString"
     description "MyText"
-    image "MyString"
+    image { Rack::Test::UploadedFile.new(File.join(
+            Rails.root, 'spec', 'support', 'test_images', 'images' ,'got.jpg')) }
   end
 end

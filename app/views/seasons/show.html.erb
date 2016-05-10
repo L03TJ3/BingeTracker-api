@@ -1,0 +1,7 @@
+<h1>All episodes for season <%= @season_number %></h1>
+
+<% @episodes.each do |episode| %>
+  <div class="episode">
+    <h2><%= episode.name %></h2>
+  </div>
+<% end %>
