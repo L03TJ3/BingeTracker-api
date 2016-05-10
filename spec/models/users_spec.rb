@@ -1,10 +1,9 @@
 require 'rails_helper'
-require 'support/shoulda_matchers'
 
-RSpec.describe User do
+describe User do
   describe "validations" do
-    it { should validates_presence_of :username}
-    it { should validates_presence_of :email}
-    it { should validates_presence_of :password}
+    it { should validate_presence_of   :username}
+    it { should validate_presence_of   :email}
+    it { should validate_uniqueness_of(:email).case_insensitive }
   end
 end
