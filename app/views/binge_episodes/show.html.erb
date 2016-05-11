@@ -1,0 +1,10 @@
+<h1><%= @binge_series.title %></h1>
+
+<p><%= image_tag(@binge_series.image, style: "width: 450px; height: 250px;") %></p>
+
+
+<h2>Season. <%= params[:season] %> <br />
+  Ep. <%= @episode.episode %> --
+<%= @episode.name %></h2><br />
+
+<%= simple_format @episode.description %>

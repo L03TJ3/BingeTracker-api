@@ -1,7 +1,12 @@
-<h1>Here you can see all the episodes of season 1</h1>
+<h1><%= @binge_series.title %></h1>
+<%= image_tag(@binge_series.image, style: "width: 450px; height: 250px;") %>
+
+<h3>Here you can see all the episodes of season <%= params[:season]%></h3>
 
 <% @episodes.each do | e | %>
   <div class="episode">
-    <%= e.name %>
+    <%= link_to binge_series_season_binge_episode_path(@binge_series.id, e.id, season: params[:season]) do %>
+      <p>Ep. <%= e.episode %> -- <%= e.name %></p>
+    <% end %>
   </div>
 <% end %>

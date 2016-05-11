@@ -1,5 +1,5 @@
 class BingeSeriesController < ApplicationController
-  before_action :set_binge_serie
+  before_action :set_binge_serie, only: [:show]
 
   def index
     @series = BingeSerie.all

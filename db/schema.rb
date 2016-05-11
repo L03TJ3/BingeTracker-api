@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510130558) do
+ActiveRecord::Schema.define(version: 20160511113703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160510130558) do
     t.integer  "binge_serie_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.integer  "episode"
   end
 
   add_index "binge_episodes", ["binge_serie_id"], name: "index_binge_episodes_on_binge_serie_id", using: :btree
