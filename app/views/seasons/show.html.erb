@@ -2,6 +2,8 @@
 
 <% @episodes.each do |episode| %>
   <div class="episode">
-    <h2><%= episode.name %></h2>
+    <%= link_to binge_series_season_binge_episode_path(@serie.id, @season_number, episode.id) do %>
+      <h2><%= episode.name %></h2>
+    <% end %>
   </div>
 <% end %>
