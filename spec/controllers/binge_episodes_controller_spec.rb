@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe BingeEpisodesController do
-  let!(:binge_episode) { create(:binge_episode, season: "1") }
+  let(:binge_episode) { create(:binge_episode, season: "1") }
 
   describe "GET show" do
     it "assigns single episode to instance variable @episode" do

@@ -9,7 +9,8 @@
         "properties": {
           "title": { "type": "string" },
           "description": { "type": "text" },
-          "image": { "type": "string" }
+          "image": { "type": "string" },
+          "required": ["seasons"]
         }
       }
     }
