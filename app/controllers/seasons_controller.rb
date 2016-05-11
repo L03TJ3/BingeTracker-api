@@ -5,6 +5,7 @@ class SeasonsController < ApplicationController
   end
 
   def show
+    @serie = BingeSerie.find(params[:binge_series_id])
     @episodes = BingeEpisode.where(binge_serie_id: params[:binge_series_id],
                                    season: params[:id])
     @season_number = params[:id]
