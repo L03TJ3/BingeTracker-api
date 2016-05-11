@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   resources :binge_series do
-    resources :seasons do
-      resources :binge_episodes
+    namespace :season, path: ':season', module: nil do
+      resources :binge_episodes, controller: 'binge_episodes'
     end
   end
 

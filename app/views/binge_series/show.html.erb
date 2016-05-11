@@ -1,0 +1,10 @@
+<h1> Here you can find all the episodes of <%= @serie.title %></h1>
+
+<p><%= @serie.description %></p>
+<% @serie.seasons.each do | s | %>
+  <%= link_to binge_series_season_binge_episodes_path(@serie.id, season: s) do %>
+    <h3>Season <%= s %></h3>
+  <% end %>
+<% end %>
+
+  <p><%= image_tag(@serie.image, style: "width: 450px; height: 250px;") %></p>
