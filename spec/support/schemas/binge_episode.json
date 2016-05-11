@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "required": ["binge_series"],
+  "properties": {
+    "binge_series": {
+      "type": "hash",
+      "items": {
+        "required": ["title", "description", "image"],
+        "properties": {
+          "id": { "type": "integer" },
+          "title": { "type": "string" },
+          "description": { "type": "text" },
+          "image": { "type": "string" },
+          "created_at": { "type": "timestamp" },
+          "updated_at": { "type": "timestamp" }
+        },
+        "properties": {
+          "binge_episodes": {
+            "type": "hash",
+            "items": {
+              "required": ["title", "description", "image"],
+              "properties": {
+                "id": { "type": "integer" },
+                "title": { "type": "string" },
+                "description": { "type": "text" },
+                "image": { "type": "string" },
+                "created_at": { "type": "timestamp" },
+                "updated_at": { "type": "timestamp" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

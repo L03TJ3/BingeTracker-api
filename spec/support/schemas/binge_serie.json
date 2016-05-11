@@ -3,16 +3,17 @@
   "required": ["binge_series"],
   "properties": {
     "binge_series": {
-      "type": "array",
+      "type": "hash",
       "items": {
         "required": ["title", "description", "image"],
         "properties": {
-          "id": { "type": "integer"},
+          "id": { "type": "integer" },
           "title": { "type": "string" },
           "description": { "type": "text" },
-          "image": { "type": "hash" },
+          "image": { "type": "string" },
           "created_at": { "type": "timestamp" },
-          "updated_at": { "type": "timestamp" }
+          "updated_at": { "type": "timestamp" },
+          "required": ["seasons"]
         }
       }
     }
