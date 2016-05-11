@@ -29,6 +29,7 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'devise'
+gem 'react_on_rails', '~> 5'
 
 # ==================================
 group :development, :test do
