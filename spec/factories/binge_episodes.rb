@@ -3,6 +3,6 @@ FactoryGirl.define do
     name "MyString"
     description "MyText"
     season 1
-    binge_serie 1
+    binge_serie
   end
 end
