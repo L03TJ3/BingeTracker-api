@@ -10,6 +10,7 @@ describe BingeSeriesController do
     end
 
     it "should assign all series to @series" do
+      get :index
       expect(assigns(:series)).to eq series
     end
   end
