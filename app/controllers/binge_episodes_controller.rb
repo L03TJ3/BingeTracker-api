@@ -15,6 +15,11 @@ class BingeEpisodesController < ApplicationController
     @episode = @binge_series.binge_episodes.
       where(season: params[:season]).
       find(params[:id])
+
+    respond_to do |f|
+      f.html
+      f.json{render json: {binge_series: @binge_series, binge_episodes: @episode } }
+    end
   end
 
   protected

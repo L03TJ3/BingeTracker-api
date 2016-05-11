@@ -1,5 +1,5 @@
 class BingeSeriesController < ApplicationController
-  before_action :set_binge_serie
+  before_action :set_binge_serie, only: [:show]
 
   def index
     @series = BingeSerie.all
@@ -15,7 +15,7 @@ class BingeSeriesController < ApplicationController
 
     respond_to do |f|
       f.html
-      f.json {render json: { binge_series: @serie } }
+      f.json {render json: { binge_series: @serie.attributes.merge({seasons: @serie.seasons})} }
     end
   end
 
