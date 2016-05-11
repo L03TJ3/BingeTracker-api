@@ -2,14 +2,17 @@
   "type": "object",
   "required": ["binge_series"],
   "properties": {
-    "posts": {
+    "binge_series": {
       "type": "array",
       "items": {
         "required": ["title", "description", "image"],
         "properties": {
+          "id": { "type": "integer"},
           "title": { "type": "string" },
           "description": { "type": "text" },
-          "image": { "type": "string" }
+          "image": { "type": "hash" },
+          "created_at": { "type": "timestamp" },
+          "updated_at": { "type": "timestamp" }
         }
       }
     }
